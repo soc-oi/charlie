@@ -1,0 +1,81 @@
+/* Page content */
+html {
+	height: 100%
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	color: white;
+	background-image: linear-gradient(to right, #10083b, #082c3b);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+div {
+	display: block;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+
+h1 {
+	font-weight: bolder;
+	font-size: 60px;
+}
+
+h2 {
+	font-weight: bolder;
+	font-size: 32px;
+}
+
+p {
+	font-size: 18px;
+}
+
+a {
+	color: white;
+}
+
+
+/* Navbar */
+ul {
+	opacity: 1;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+ul li a {
+	display: block;
+	color: white;
+	padding: 14px 16px;
+	font-size: 18px;
+	text-decoration: none #ffffff 0px;
+	margin-bottom: 4px;
+}
+
+ul li a:hover {
+	border-bottom: 4px solid white;
+	margin-bottom: 0px;
+  	background-color: rgba(255, 255, 255, 0.05);
+}
+
+ul li a.active {
+	background-color: #04AA6D;
+}
+
+div.content {
+	opacity: 0;
+	animation: fadeIn 0.66s forwards;
+}
+
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}

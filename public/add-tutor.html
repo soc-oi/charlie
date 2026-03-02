@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+	<title>Tutor Sign Up - Walton MAT</title>
+</head>
+<body>
+	<div>
+		<h2>Add Tutor</h2>
+		<form id="tutorForm">
+			First Name: <input name="firstname"><br>
+			Last Name: <input name="lastname"><br>
+			Email: <input name="email"><br>
+			Phone: <input name="phone"><br>
+			Grade: <select name="grade">
+				<option value="">Select Grade</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+			</select><br>
+			Homeroom (Last Name, Room #): <input name="homeroom"><br>
+			Current Math Class: <input name="current_class"><br>
+
+			Courses:<br>
+			<label><input type="checkbox" name="courses" value="Algebra"> Algebra</label><br>
+			<label><input type="checkbox" name="courses" value="Geometry"> Geometry</label><br>
+			<label><input type="checkbox" name="courses" value="Advanced Algebra"> Advanced Algebra</label><br>
+			<label><input type="checkbox" name="courses" value="Precalculus"> Precalculus</label><br>
+			<label><input type="checkbox" name="courses" value="AP Precalculus AB"> AP Precalculus AB</label><br>
+			<label><input type="checkbox" name="courses" value="AP Precalculus BC"> AP Precalculus BC</label><br>
+			<label><input type="checkbox" name="courses" value="AP Calculus AB"> AP Calculus AB</label><br>
+			<label><input type="checkbox" name="courses" value="AP Calculus BC"> AP Calculus BC</label><br>
+			<label><input type="checkbox" name="courses" value="AP Statistics"> AP Statistics</label><br>
+			<label><input type="checkbox" name="courses" value="Adv Math Decision Making"> Adv Math Decision Making</label><br>
+
+			Availability:<br>
+			<label><input type="checkbox" name="availability" value="Before School"> Before School</label><br>
+			<label><input type="checkbox" name="availability" value="After School"> After School</label><br>
+			<label><input type="checkbox" name="availability" value="WEB"> WEB</label><br>
+			<label><input type="checkbox" name="availability" value="3rd Period"> 3rd Period</label><br>
+			<label><input type="checkbox" name="availability" value="4th Period"> 4th Period</label><br>
+			<label><input type="checkbox" name="availability" value="5th Period"> 5th Period</label><br>
+			<label><input type="checkbox" name="availability" value="6th Period"> 6th Period</label><br>
+			<button type="submit">Submit</button>
+		</form>
+		<script src="app.js"></script>
+	</div>
+</body>
