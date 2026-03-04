@@ -31,6 +31,13 @@ CREATE TABLE IF NOT EXISTS tutees (
     matched INTEGER DEFAULT 0,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS pairings (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    tutor_id INTEGER NOT NULL,
+    tutee_id INTEGER NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
 `);
 
 module.exports = db;
