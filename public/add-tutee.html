@@ -10,107 +10,98 @@
 	<title>Tutee Sign Up - Walton MAT</title>
 </head>
 <body>
-	<div>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/add-tutor.html">Tutor Sign Up</a></li>
-			<li><a href="/add-tutee.html">Tutee Sign Up</a></li>
-			<li><a href="/match.html">Assign Matches</a></li>
-		</ul>
-	</div>
+	<header class="top-nav">
+		<div class="top-nav__inner">
+			<div class="brand">
+				<span class="brand__title">Charlie</span>
+				<span class="brand__subtitle">Walton MAT Pairings</span>
+			</div>
+			<nav>
+				<ul class="nav-list">
+					<li><a href="/" class="nav-link">Home</a></li>
+					<li><a href="/add-tutor.html" class="nav-link">Tutor Sign Up</a></li>
+					<li><a href="/add-tutee.html" class="nav-link nav-link--active">Tutee Sign Up</a></li>
+					<li><a href="/admin.html" class="nav-link">Admin Tools</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-	<div class="content">
-		<h2>Add Tutee</h2>
-		<form id="tuteeForm">
-			First Name: <input name="firstname"><br>
-			Last Name: <input name="lastname"><br>
-			Email: <input type="email" name="email"><br>
-			Phone: <input type="tel" name="phone" class="phone" pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}"><br>
-			Grade: <select name="grade">
-				<option value="">Select Grade</option>
-				<option value="9">9</option>
-				<option value="10">10</option>
-				<option value="11">11</option>
-				<option value="12">12</option>
-			</select><br>
-			Homeroom (Last Name, Room #): <input name="homeroom"><br>
-			Math Class Level: <select name="level">
-				<option value="">Select On Level/Honors/AP</option>
-				<option value="On Level">On Level</option>
-				<option value="Honors">Honors</option>
-				<option value="AP">AP</option>
-			</select><br>
-			Math Class Name: <select name="courses">
-				<option value="">Select Class Name</option>
-				<option value="Algebra">Algebra</option><br>
-				<option value="Accel Geo/Adv Alg">Accel Geo/Adv Alg</option><br>
-				<option value="Geometry">Geometry</option><br>
-				<option value="Advanced Algebra">Advanced Algebra</option><br>
-				<option value="Precalculus">Precalculus</option><br>
-				<option value="AP Precalculus AB">AP Precalculus AB</option><br>
-				<option value="AP Precalculus BC">AP Precalculus BC</option><br>
-				<option value="AP Calculus AB">AP Calculus AB</option><br>
-				<option value="AP Calculus BC">AP Calculus BC</option><br>
-				<option value="AP Statistics">AP Statistics</option><br>
-				<option value="Adv Math Decision Making">Adv Math Decision Making</option><br>
-			</select><br>
-			Math Class Teacher: <input name="teacher"><br>
-			Availability:
-			<div class="checkbox-section">
-				<div class="checkbox-grid">
-					<label class="checkbox-item">
-						<input type="checkbox" name="availability" value="Before School">
-						Before School
-						<span class="checkmark"></span>
+	<main class="page">
+		<section class="card">
+			<h2>Add Tutee</h2>
+			<form id="tuteeForm" class="form">
+				<div class="form-grid">
+					<label class="form-field">
+						<span>First Name</span>
+						<input name="firstname" />
 					</label>
-
-					<label class="checkbox-item">
-						<input type="checkbox" name="availability" value="After School">
-						After School
-						<span class="checkmark"></span>
+					<label class="form-field">
+						<span>Last Name</span>
+						<input name="lastname" />
 					</label>
-
-					<label class="checkbox-item">
-						<input type="checkbox" name="availability" value="WEB">
-						WEB
-						<span class="checkmark"></span>
+					<label class="form-field">
+						<span>Email</span>
+						<input name="email" type="email" />
 					</label>
-
-					<label class="checkbox-item">
-						<input type="checkbox" name="availability" value="3rd Period">
-						3rd Period
-						<span class="checkmark"></span>
+					<label class="form-field">
+						<span>Phone</span>
+						<input name="phone" />
 					</label>
-
-					<label class="checkbox-item">
-						<input type="checkbox" name="availability" value="4th Period">
-						4th Period
-						<span class="checkmark"></span>
+					<label class="form-field">
+						<span>Grade</span>
+						<select name="grade">
+							<option value="">Select Grade</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
 					</label>
-
-					<label class="checkbox-item">
-						<input type="checkbox" name="availability" value="5th Period">
-						5th Period
-						<span class="checkmark"></span>
+					<label class="form-field">
+						<span>Homeroom (Last Name, Room #)</span>
+						<input name="homeroom" />
 					</label>
-
-					<label class="checkbox-item">
-						<input type="checkbox" name="availability" value="6th Period">
-						6th Period
-						<span class="checkmark"></span>
+					<label class="form-field">
+						<span>Math Class</span>
+						<select name="courses">
+							<option value="">Select Class Name</option>
+							<option value="Algebra">Algebra</option>
+							<option value="Geometry">Geometry</option>
+							<option value="Advanced Algebra">Advanced Algebra</option>
+							<option value="Precalculus">Precalculus</option>
+							<option value="AP Precalculus AB">AP Precalculus AB</option>
+							<option value="AP Precalculus BC">AP Precalculus BC</option>
+							<option value="AP Calculus AB">AP Calculus AB</option>
+							<option value="AP Calculus BC">AP Calculus BC</option>
+							<option value="AP Statistics">AP Statistics</option>
+							<option value="Adv Math Decision Making">Adv Math Decision Making</option>
+						</select>
+					</label>
+					<label class="form-field form-field--full">
+						<span>Math Class Teacher</span>
+						<input name="teacher" />
 					</label>
 				</div>
-			</div>
-			<button type="submit">Submit</button>
-		</form>
-		<script src="app.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
-		<script>
-		const cleave = new Cleave('.phone', {
-			delimiters: ['(', ') ', '-'],
-			blocks: [0, 3, 3, 4],
-			uppercase: true
-		});
-		</script>
-	</div>
+
+				<fieldset class="form-fieldset">
+					<legend>Availability</legend>
+					<div class="chip-list">
+						<label class="chip"><input type="checkbox" name="availability" value="Before School"> <span>Before School</span></label>
+						<label class="chip"><input type="checkbox" name="availability" value="After School"> <span>After School</span></label>
+						<label class="chip"><input type="checkbox" name="availability" value="WEB"> <span>WEB</span></label>
+						<label class="chip"><input type="checkbox" name="availability" value="3rd Period"> <span>3rd Period</span></label>
+						<label class="chip"><input type="checkbox" name="availability" value="4th Period"> <span>4th Period</span></label>
+						<label class="chip"><input type="checkbox" name="availability" value="5th Period"> <span>5th Period</span></label>
+						<label class="chip"><input type="checkbox" name="availability" value="6th Period"> <span>6th Period</span></label>
+					</div>
+				</fieldset>
+
+				<div class="form-actions">
+					<button type="submit" class="button button--primary">Submit</button>
+				</div>
+			</form>
+			<script src="app.js"></script>
+		</section>
+	</main>
 </body>

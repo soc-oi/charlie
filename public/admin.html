@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+	<title>Admin Tools - Walton MAT</title>
+</head>
+<body>
+	<header class="top-nav">
+		<div class="top-nav__inner">
+			<div class="brand">
+				<span class="brand__title">Charlie</span>
+				<span class="brand__subtitle">Walton MAT Pairings</span>
+			</div>
+			<nav>
+				<ul class="nav-list">
+					<li><a href="/" class="nav-link">Home</a></li>
+					<li><a href="/add-tutor.html" class="nav-link">Tutor Sign Up</a></li>
+					<li><a href="/add-tutee.html" class="nav-link">Tutee Sign Up</a></li>
+					<li><a href="/admin.html" class="nav-link nav-link--active">Admin Tools</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="page page--admin">
+		<section class="card" id="adminLoginCard">
+			<h2>Admin Login</h2>
+			<p class="muted">Enter the admin password to manage matching and view current pairings.</p>
+			<form id="adminLoginForm" class="form form--inline">
+				<label class="form-field form-field--full">
+					<span>Admin Password</span>
+					<input type="password" id="adminPassword" autocomplete="current-password" />
+				</label>
+				<div class="form-actions">
+					<button type="submit" class="button button--primary">Continue</button>
+					<p id="adminLoginError" class="error-text" aria-live="polite"></p>
+				</div>
+			</form>
+		</section>
+
+		<section class="card card--stacked" id="adminPanel" hidden>
+			<div class="card__header">
+				<h2>Admin Tools</h2>
+				<button id="adminLogout" class="button button--ghost">Sign out</button>
+			</div>
+
+			<div class="admin-actions">
+				<button id="runMatchingBtn" class="button button--primary">Run Matching</button>
+				<button id="viewPairingsBtn" class="button button--secondary">View Current Pairings</button>
+				<span id="adminStatus" class="muted" aria-live="polite"></span>
+			</div>
+
+			<div class="admin-layout">
+				<section class="admin-column">
+					<h3 class="admin-column__title">Proposed Pairings</h3>
+					<p class="muted">Review and confirm or deny new tutor–tutee matches.</p>
+					<div id="proposedList" class="pair-list empty-state">
+						<p class="muted">Run matching to see proposed pairings.</p>
+					</div>
+				</section>
+
+				<section class="admin-column">
+					<h3 class="admin-column__title">Current Pairings</h3>
+					<p class="muted">These tutor–tutee pairs have been confirmed.</p>
+					<div id="currentPairings" class="pair-list empty-state">
+						<p class="muted">No confirmed pairings yet.</p>
+					</div>
+				</section>
+			</div>
+		</section>
+
+		<div id="unpairModal" class="modal-backdrop" hidden>
+			<div class="modal">
+				<h3>Unpair this tutor and tutee?</h3>
+				<p id="unpairText" class="muted"></p>
+				<div class="modal-actions">
+					<button id="unpairConfirm" class="button button--danger">Unpair</button>
+					<button id="unpairCancel" class="button button--secondary">Don't</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="app.js"></script>
+	</main>
+</body>
+</html>
+

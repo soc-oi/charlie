@@ -11,21 +11,28 @@
 	<title>Match Tutees - Walton MAT</title>
 </head>
 <body>
-	<div>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/add-tutor.html">Tutor Sign Up</a></li>
-			<li><a href="/add-tutee.html">Tutee Sign Up</a></li>
-			<li><a href="/match.html">Assign Matches</a></li>
-		</ul>
-	</div>
+	<header class="top-nav">
+		<div class="top-nav__inner">
+			<div class="brand">
+				<span class="brand__title">Charlie</span>
+				<span class="brand__subtitle">Walton MAT Pairings</span>
+			</div>
+			<nav>
+				<ul class="nav-list">
+					<li><a href="/" class="nav-link">Home</a></li>
+					<li><a href="/add-tutor.html" class="nav-link">Tutor Sign Up</a></li>
+					<li><a href="/add-tutee.html" class="nav-link">Tutee Sign Up</a></li>
+					<li><a href="/admin.html" class="nav-link nav-link--active">Admin Tools</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-	<div class="content">
-		<h2>Run Matching</h2>
-		<p for="password">Admin Password:</p>
-		<input type="password" id="password" />
-		<button id="runMatch">Run Matching</button>
-		<div id="results"></div>
-		<script src="app.js"></script>
-	</div>
+	<main class="page page--centered">
+		<section class="card">
+			<h2>Run Matching</h2>
+			<p class="muted">This page has been replaced by the new Admin Tools dashboard.</p>
+			<a href="/admin.html" class="button button--primary">Go to Admin Tools</a>
+		</section>
+	</main>
 </body>
