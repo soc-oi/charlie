@@ -11,12 +11,21 @@
 </head>
 <body>
 	<div>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/add-tutor.html">Tutor Sign Up</a></li>
+			<li><a href="/add-tutee.html">Tutee Sign Up</a></li>
+			<li><a href="/match.html">Assign Matches</a></li>
+		</ul>
+	</div>
+
+	<div class="content">
 		<h2>Add Tutor</h2>
 		<form id="tutorForm">
 			First Name: <input name="firstname"><br>
 			Last Name: <input name="lastname"><br>
-			Email: <input name="email"><br>
-			Phone: <input name="phone"><br>
+			Email: <input type="email" name="email"><br>
+			Phone: <input type="tel" name="phone" class="phone" pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}"><br>
 			Grade: <select name="grade">
 				<option value="">Select Grade</option>
 				<option value="11">11</option>
@@ -25,28 +34,127 @@
 			Homeroom (Last Name, Room #): <input name="homeroom"><br>
 			Current Math Class: <input name="current_class"><br>
 
-			Courses:<br>
-			<label><input type="checkbox" name="courses" value="Algebra"> Algebra</label><br>
-			<label><input type="checkbox" name="courses" value="Geometry"> Geometry</label><br>
-			<label><input type="checkbox" name="courses" value="Advanced Algebra"> Advanced Algebra</label><br>
-			<label><input type="checkbox" name="courses" value="Precalculus"> Precalculus</label><br>
-			<label><input type="checkbox" name="courses" value="AP Precalculus AB"> AP Precalculus AB</label><br>
-			<label><input type="checkbox" name="courses" value="AP Precalculus BC"> AP Precalculus BC</label><br>
-			<label><input type="checkbox" name="courses" value="AP Calculus AB"> AP Calculus AB</label><br>
-			<label><input type="checkbox" name="courses" value="AP Calculus BC"> AP Calculus BC</label><br>
-			<label><input type="checkbox" name="courses" value="AP Statistics"> AP Statistics</label><br>
-			<label><input type="checkbox" name="courses" value="Adv Math Decision Making"> Adv Math Decision Making</label><br>
+			Courses you can tutor:
+			<div class="checkbox-section">
+				<div class="checkbox-grid">
+					<label class="checkbox-item">
+						<input type="checkbox" name="courses" value="Algebra">
+						Algebra
+						<span class="checkmark"></span>
+					</label>
 
-			Availability:<br>
-			<label><input type="checkbox" name="availability" value="Before School"> Before School</label><br>
-			<label><input type="checkbox" name="availability" value="After School"> After School</label><br>
-			<label><input type="checkbox" name="availability" value="WEB"> WEB</label><br>
-			<label><input type="checkbox" name="availability" value="3rd Period"> 3rd Period</label><br>
-			<label><input type="checkbox" name="availability" value="4th Period"> 4th Period</label><br>
-			<label><input type="checkbox" name="availability" value="5th Period"> 5th Period</label><br>
-			<label><input type="checkbox" name="availability" value="6th Period"> 6th Period</label><br>
+					<label class="checkbox-item">
+						<input type="checkbox" name="courses" value="Geometry">
+						Geometry
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkbox-item">
+						<input type="checkbox" name="courses" value="Advanced Algebra">
+						Advanced Algebra
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkbox-item">
+						<input type="checkbox" name="courses" value="Precalculus">
+						Precalculus
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkbox-item">
+						<input type="checkbox" name="courses" value="AP Precalculus AB">
+						AP Precalculus AB
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkbox-item">
+						<input type="checkbox" name="courses" value="AP Precalculus BC">
+						AP Precalculus BC
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkbox-item">
+						<input type="checkbox" name="courses" value="AP Calculus AB">
+						AP Calculus AB
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkbox-item">
+						<input type="checkbox" name="courses" value="AP Calculus BC">
+						AP Calculus BC
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkbox-item">
+						<input type="checkbox" name="courses" value="AP Statistics">
+						AP Statistics
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkbox-item">
+						<input type="checkbox" name="courses" value="Adv Math Decision Making">
+						Adv Math Decision Making
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+
+			Availability:
+			<div class="checkbox-section">
+				<div class="checkbox-grid">
+					<label class="checkbox-item">
+						<input type="checkbox" name="availability" value="Before School">
+						Before School
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkbox-item">
+						<input type="checkbox" name="availability" value="After School">
+						After School
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkbox-item">
+						<input type="checkbox" name="availability" value="WEB">
+						WEB
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkbox-item">
+						<input type="checkbox" name="availability" value="3rd Period">
+						3rd Period
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkbox-item">
+						<input type="checkbox" name="availability" value="4th Period">
+						4th Period
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkbox-item">
+						<input type="checkbox" name="availability" value="5th Period">
+						5th Period
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkbox-item">
+						<input type="checkbox" name="availability" value="6th Period">
+						6th Period
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
 			<button type="submit">Submit</button>
 		</form>
 		<script src="app.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+		<script>
+		const cleave = new Cleave('.phone', {
+			delimiters: ['(', ') ', '-'],
+			blocks: [0, 3, 3, 4],
+			uppercase: true
+		});
+		</script>
 	</div>
 </body>

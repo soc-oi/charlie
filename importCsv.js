@@ -64,7 +64,7 @@ function importCSV(filePath, type) {
 module.exports = importCSV;
 
 if (require.main === module) {
-    const importCSV = require("./importer");
+    const importCSV = require("./importCsv");
 
     importCSV("./tutormatch.csv", "tutors");
     importCSV("./tuteematch.csv", "tutees");
